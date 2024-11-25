@@ -8,7 +8,7 @@
 // Функция для обработки команды echo
 bool handle_echo(char *command, char *output) {
     if (strncmp(command, "echo ", 5) == 0) {
-        strcpy(output, command + 5); // Копируем текст после "echo"
+        strcpy(output, command + 5); // Выводим весь текст после "echo"
         return true;
     }
     return false;
@@ -16,7 +16,7 @@ bool handle_echo(char *command, char *output) {
 
 int main() {
     
-    // Задание 5-6: команда echo и проверка этой команды
+    // Задание 5: команда echo и проверка этой команды
     char buffer[BUFFER_SIZE]; // Ввод команды
     char output[BUFFER_SIZE]; // Вывод строки
 
@@ -37,7 +37,6 @@ int main() {
         } 
         
         else {
-             //Здесь можно добавить обработку других команд или вывод сообщения об ошибке
             printf("Неправильный ввод: %s\n", buffer);
         }
         printf("\n");
