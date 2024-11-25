@@ -50,8 +50,10 @@ int main() {
 
         printf("0: Выйти\n"); 
         int choice;
+        printf("\n"); 
         printf("Ваш выбор: ");
         scanf("%d", &choice);
+        printf("\n"); 
 
         if (choice == 0) break; // Выход из программы
 
@@ -63,7 +65,8 @@ int main() {
             if (ret == -1) {
                 perror("Ошибка выполнения команды");
             }
-        } else {
+        } 
+        else {
             printf("Неверный выбор.\n");
         }
         printf("\n");
