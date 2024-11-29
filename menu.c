@@ -58,7 +58,7 @@ int main() {
         if (choice == 0) break; // Выход из программы
 
         if (choice > 0 && choice <= count) {
-            sprintf(command, "gcc %s -o output && ./output", files[choice - 1]); // Запись того, какие файлы компилировали и запускали
+            sprintf(command, "gcc %s -o output && sudo ./output", files[choice - 1]); 
             log_command(command); // Сохраняем команду в историю
             
             int ret = system(command); // Выполняем команду
