@@ -18,6 +18,7 @@ int main() {
     
     // Задание 5: команда echo и проверка этой команды
     printf("Задание 5: команда echo и проверка этой команды\n");
+    printf("\n");
     char buffer[BUFFER_SIZE]; // Ввод команды
     char output[BUFFER_SIZE]; // Вывод строки
 
