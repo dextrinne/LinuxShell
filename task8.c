@@ -7,6 +7,8 @@
 #include <limits.h> // Для PATH_MAX
 
 int main() {
+    printf("Задание 8: выполнение указанного бинарника\n");
+    printf("\n");
     char binary_path[PATH_MAX]; // Используем PATH_MAX для безопасного хранения пути
 
     printf("Введите путь к бинарнику: ");
