@@ -1,15 +1,15 @@
-#include <stdio.h>
 #include <stdlib.h>
 #include <fcntl.h>
 #include <unistd.h>
 #include <stdint.h>
 #include <string.h> 
+#include <stdio.h> 
 
 int main(int argc, char *argv[]) {
     printf("Задание 10: определить является ли диск загрузочным\n");
     printf("\n");
 
-    char device_name[100];
+    char device_name[15];
 
     printf("Введите имя устройства (например, sda, sdb): ");
     if (fgets(device_name, sizeof(device_name), stdin) == NULL) {
@@ -38,6 +38,7 @@ int main(int argc, char *argv[]) {
 
     close(fd);
 
+    // Проверка сигнатуры загрузочного диска
     if (buffer[510] == 0x55 && buffer[511] == 0xAA) {
         printf("Диск %s является загрузочным.\n", device_name);
     } else {
@@ -46,4 +47,3 @@ int main(int argc, char *argv[]) {
 
     return 0;
 }
-
